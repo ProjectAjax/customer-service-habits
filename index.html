@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Service Habits Framework</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        .feeling {
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .description {
+            display: none;
+            margin-top: 20px;
+        }
+        .icon {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>How Ready Are You to Provide Service?</h1>
+        <div class="feeling" onclick="showDescription('positive')">
+            <img src="path_to_your_images/positive_icon.png" alt="Feeling Positive" class="icon">
+            <p>Feeling Positive</p>
+        </div>
+        <div class="feeling" onclick="showDescription('focused')">
+            <img src="path_to_your_images/focused_icon.png" alt="Feeling Focused" class="icon">
+            <p>Feeling Focused</p>
+        </div>
+        <!-- Add more feelings here -->
+        
+        <div id="positive" class="description">
+            <h2>Feeling Positive</h2>
+            <p>Description: You’re feeling positive and enthusiastic! Your optimism and excitement are infectious, creating a welcoming atmosphere for customers and colleagues.</p>
+            <img src="path_to_your_images/positive_image.png" alt="Positive Posture">
+            <video controls>
+                <source src="path_to_your_videos/positive_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div id="focused" class="description">
+            <h2>Feeling Focused</h2>
+            <p>Description: You’re able to concentrate well and are giving your full attention to what you’re doing. Distractions aren’t affecting you much right now.</p>
+            <img src="path_to_your_images/focused_image.png" alt="Focused Posture">
+            <video controls>
+                <source src="path_to_your_videos/focused_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <!-- Add more descriptions here -->
+    </div>
+
+    <script>
+        function showDescription(feeling) {
+            var descriptions = document.querySelectorAll('.description');
+            descriptions.forEach(function(desc) {
+                desc.style.display = 'none';
+            });
+            document.getElementById(feeling).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
